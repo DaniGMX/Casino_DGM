@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1561047007 source:c:\users\danie\documents\cprojects\casino_dgm\main.cpp
+	<iostream>
+
+1561041951 source:c:\users\danie\documents\cprojects\casino_dgm\src\jugador.cpp
+	"Jugador.h"
+
+1561061804 c:\users\danie\documents\cprojects\casino_dgm\include\jugador.h
+	<string>
+
