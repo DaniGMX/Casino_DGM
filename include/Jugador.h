@@ -10,36 +10,34 @@ class Jugador
     public:
         /// Constructores
         Jugador();
-        Jugador(string _name, int _edad, int _dni, float saldo);
+        Jugador(string _name, int _edad, int _saldo);
 
         /// Destructores
         ~Jugador();
 
         /// Getters & Setters
-        string getNombre(){ return this->nombre; }
+        string getAlias(){ return this->alias; }
         int getEdad(){ return this->edad; }
-        int getDNI(){ return this->dni; }
-        float getSaldo(){ return this->saldo; }
+        int getSaldo(){ return this->saldo; }
 
-        void setNombre(string _nombre) { this->nombre = _nombre; }
+        void setAlias(string _alias) { this->alias = _alias; }
         void setEdad(int _edad) { this->edad = _edad; }
-        void setDni(int _dni) { this->dni = _dni; }
-        void setSaldo(float _saldo) { this->saldo = _saldo; }
+        void setSaldo(int _saldo) { this->saldo = _saldo; }
 
         /// Metodos
 
     private:
         /// Variables
-        string nombre;
+        string alias;
         int edad;
-        int dni;
-        float saldo;
+        int saldo;
 
         /// Sobrecargas
 
 
         /// Metodos
-
+        void ImprimirJugador();
+        bool JugadorCorrecto();
 };
 
 #endif // JUGADOR_H

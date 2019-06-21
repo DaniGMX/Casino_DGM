@@ -8,3 +8,24 @@
 1561061804 c:\users\danie\documents\cprojects\casino_dgm\include\jugador.h
 	<string>
 
+1561149343 source:c:\users\danie\documents\git\casino_dgm\main.cpp
+	<iostream>
+	"UI.h"
+	"Jugador.h"
+
+1561149269 source:c:\users\danie\documents\git\casino_dgm\src\ui.cpp
+	"UI.h"
+
+1561149327 c:\users\danie\documents\git\casino_dgm\include\ui.h
+	<iostream>
+	<string>
+	<math.h>
+	"Jugador.h"
+
+1561149615 source:c:\users\danie\documents\git\casino_dgm\src\jugador.cpp
+	<iostream>
+	"Jugador.h"
+
+1561148577 c:\users\danie\documents\git\casino_dgm\include\jugador.h
+	<string>
+
