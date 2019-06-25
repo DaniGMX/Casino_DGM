@@ -34,10 +34,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Asiento.h" />
+		<Unit filename="include/Casino.h" />
 		<Unit filename="include/Jugador.h" />
+		<Unit filename="include/Mesa.h" />
+		<Unit filename="include/Ruleta.h" />
 		<Unit filename="include/UI.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Asiento.cpp" />
+		<Unit filename="src/Casino.cpp" />
 		<Unit filename="src/Jugador.cpp" />
+		<Unit filename="src/Mesa.cpp" />
+		<Unit filename="src/Ruleta.cpp" />
 		<Unit filename="src/UI.cpp" />
 		<Extensions>
 			<code_completion />

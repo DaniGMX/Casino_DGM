@@ -37,6 +37,7 @@ class UI
         void ImprimirJugador(Jugador _jugador);
 
         /// Puro UI
+        void EncabezadoJugador();
         void LineaSuperior();
         void LineaInferior();
 };

@@ -8,24 +8,62 @@
 1561061804 c:\users\danie\documents\cprojects\casino_dgm\include\jugador.h
 	<string>
 
-1561149343 source:c:\users\danie\documents\git\casino_dgm\main.cpp
+1561464368 source:c:\users\danie\documents\git\casino_dgm\main.cpp
 	<iostream>
+	<cstdlib>
+	"Casino.h"
 	"UI.h"
 	"Jugador.h"
+	"Ruleta.h"
 
-1561149269 source:c:\users\danie\documents\git\casino_dgm\src\ui.cpp
+1561376490 source:c:\users\danie\documents\git\casino_dgm\src\ui.cpp
 	"UI.h"
 
-1561149327 c:\users\danie\documents\git\casino_dgm\include\ui.h
+1561378476 c:\users\danie\documents\git\casino_dgm\include\ui.h
 	<iostream>
 	<string>
 	<math.h>
 	"Jugador.h"
 
-1561149615 source:c:\users\danie\documents\git\casino_dgm\src\jugador.cpp
+1561155770 source:c:\users\danie\documents\git\casino_dgm\src\jugador.cpp
 	<iostream>
 	"Jugador.h"
 
 1561148577 c:\users\danie\documents\git\casino_dgm\include\jugador.h
 	<string>
+
+1561464425 source:c:\users\danie\documents\git\casino_dgm\src\casino.cpp
+	"Casino.h"
+
+1561463615 c:\users\danie\documents\git\casino_dgm\include\casino.h
+	<iostream>
+	<cstdlib>
+	"Jugador.h"
+	"Ruleta.h"
+
+1561373847 c:\users\danie\documents\git\casino_dgm\include\ruleta.h
+	<Mesa.h>
+
+1561373726 c:\users\danie\documents\git\casino_dgm\include\mesa.h
+	"Asiento.h"
+
+1561212077 c:\users\danie\documents\git\casino_dgm\include\blackjack.h
+	<Mesa.h>
+
+1561211634 source:c:\users\danie\documents\git\casino_dgm\src\blackjack.cpp
+	"Blackjack.h"
+
+1561211591 source:c:\users\danie\documents\git\casino_dgm\src\mesa.cpp
+	"Mesa.h"
+
+1561211616 source:c:\users\danie\documents\git\casino_dgm\src\ruleta.cpp
+	"Ruleta.h"
+
+1561211890 source:c:\users\danie\documents\git\casino_dgm\src\asiento.cpp
+	"Asiento.h"
+
+1561373581 c:\users\danie\documents\git\casino_dgm\include\asiento.h
+	"Jugador.h"
+
+1561212013 c:\users\danie\documents\git\casino_dgm\include\ficha.h
 

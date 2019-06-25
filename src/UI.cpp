@@ -12,7 +12,7 @@ void UI::ImprimirJugador(Jugador _jugador)
 {
     int tamDato, blanks;
 
-    LineaSuperior();
+    EncabezadoJugador();
     for (int i = 0; i < 3; i++)
     {
         switch (i)
@@ -73,6 +73,51 @@ void UI::LineaSuperior()
             cout << (char)E << endl;
         else
             cout << (char)H;
+    }
+}
+
+void UI::EncabezadoJugador()
+{
+    int lineas = 3;
+    int strTam = 7;
+    char strJugador[strTam] = {'J', 'U', 'G', 'A', 'D', 'O', 'R'};
+
+    for (int i = 0; i < lineas; i++)
+    {
+        switch (i)
+        {
+            case 0:
+                cout << (char)Q;
+                for (int j = 0; j < strTam; j++)
+                {
+                    cout << (char)H;
+                }
+                cout << (char)E << endl;
+                break;
+
+            case 1:
+                cout << (char)V;
+                for (int j = 0; j < strTam; j++)
+                {
+                    cout << strJugador[j];
+                }
+                cout << (char)V << endl;
+                break;
+
+            case 2:
+                for (int j = 0; j < TAM; j++)
+                {
+                    if (j == 0)
+                        cout << (char)A;
+                    else if (j == strTam + 1)
+                        cout << (char)X;
+                    else if (j == TAM - 1)
+                        cout << (char)E << endl;
+                    else
+                        cout << (char)H;
+                }
+                break;
+        }
     }
 }
 
