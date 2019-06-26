@@ -28,14 +28,23 @@ void Casino::AddJugador()
         jugadoresAnteriores = jugadores;
 
         numeroJugadores++;
+
         redimensionarJugadores();
 
         for (int i = 0; i < numeroJugadores; i++)
         {
-            if (i == numeroJugadores - 1)
-                jugadores[i] = nuevoJugador;
-            else
+            if (i < (numeroJugadores - 1))
+            {
+                cout << i << endl;
                 jugadores[i] = jugadoresAnteriores[i];
+                cout << jugadores[i].getAlias() << endl;
+            }
+            else
+            {
+                cout << i << endl;
+                jugadores[numeroJugadores - 1] = nuevoJugador;
+                cout << jugadores[i].getAlias() << endl;
+            }
         }
     }
 
@@ -43,15 +52,26 @@ void Casino::AddJugador()
     {
         numeroJugadores++;
         redimensionarJugadores();
-        jugadores[numeroJugadores - 1] = nuevoJugador;
+        jugadores[0] = nuevoJugador;
     }
 
     system("cls");
 }
 
+void Casino::AddPlayers()
+{
+    Jugador* nuevoJugador = new Jugador();
+
+    numeroJugadores++;
+
+    players.push_back(*nuevoJugador);
+}
+
 void Casino::redimensionarJugadores()
 {
     jugadores = (Jugador*)malloc(sizeof(Jugador) * numeroJugadores);
+
+    jugadores = (Jugador*)realloc(jugadores, sizeof(Jugador) * numeroJugadores);
 }
 
 int Casino::Menu()
@@ -90,8 +110,9 @@ int Casino::Menu()
                 salaActual = 1;
                 break;
             case 1:
-                AddJugador();
+                AddPlayers();
                 break;
+
             case 2:
                 cout << "\nHasta la proxima!" << endl;
                 eleccion = -1;
@@ -130,9 +151,7 @@ int Casino::Menu()
             case 1:
                 salaActual = 0;
                 break;
-
         }
-
         system("cls");
     }
 

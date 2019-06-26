@@ -17,13 +17,13 @@ int main()
     Casino miCasino = Casino();
     UI miUI = UI();
 
-    miCasino.AddJugador();
+    miCasino.AddPlayers();
 
     while (infinite > -1)
     {
         for (int i = 0; i < miCasino.getNumeroJugadores(); i++)
         {
-            miUI.ImprimirJugador(miCasino.getJugador(i));
+            miUI.ImprimirJugador(miCasino.getPlayer(i));
         }
         infinite = miCasino.Menu();
     }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 
 #include "Jugador.h"
 #include "Ruleta.h"
@@ -19,12 +20,14 @@ class Casino
         ~Casino();
 
         /// Getters & Setters
-        Jugador getJugador(int index) { return jugadores[index];}
-        int getNumeroJugadores() {return numeroJugadores; }
+        // Jugador getJugador(int index) { return players[index]; }
+        Jugador getPlayer(int index) { return players[index]; }
+        int getNumeroJugadores() {return players.size(); }
         int getEleccion() { return eleccion; }
 
         /// Metodos
         void AddJugador();
+        void AddPlayers();
         void redimensionarJugadores();
         int Menu();
 
@@ -35,6 +38,9 @@ class Casino
         int numeroJugadores;
         Jugador* jugadores;
         Ruleta mesaRuleta;
+
+        std::vector<Jugador> players;
+
 
         /// Sobrecargas
 

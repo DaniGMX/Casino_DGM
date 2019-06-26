@@ -8,7 +8,7 @@
 1561061804 c:\users\danie\documents\cprojects\casino_dgm\include\jugador.h
 	<string>
 
-1561464368 source:c:\users\danie\documents\git\casino_dgm\main.cpp
+1561555495 source:c:\users\danie\documents\git\casino_dgm\main.cpp
 	<iostream>
 	<cstdlib>
 	"Casino.h"
@@ -32,12 +32,13 @@
 1561148577 c:\users\danie\documents\git\casino_dgm\include\jugador.h
 	<string>
 
-1561464425 source:c:\users\danie\documents\git\casino_dgm\src\casino.cpp
+1561555258 source:c:\users\danie\documents\git\casino_dgm\src\casino.cpp
 	"Casino.h"
 
-1561463615 c:\users\danie\documents\git\casino_dgm\include\casino.h
+1561555057 c:\users\danie\documents\git\casino_dgm\include\casino.h
 	<iostream>
 	<cstdlib>
+	<vector>
 	"Jugador.h"
 	"Ruleta.h"
 
