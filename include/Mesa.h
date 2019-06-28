@@ -1,7 +1,12 @@
 #ifndef MESA_H
 #define MESA_H
 
+#include <vector>
+#include <iostream>
+
 #include "Asiento.h"
+
+using namespace std;
 
 class Mesa
 {
@@ -13,14 +18,17 @@ class Mesa
         ~Mesa();
 
         /// Getters & Setters
+        Asiento getAsiento(int index) { return asientos[index]; }
+        int getNumeroAsientos() { return numeroAsientos; }
 
         /// Metodos
+        void PedirJugadores(vector<Jugador> _jugadoresPosibles);
 
     private:
         /// Variables
         int banca = 1000000;
-        Asiento* asaientos;
-        bool sePuedeApostar;
+        vector<Asiento> asientos;
+        int numeroAsientos;
 
         /// Sobrecargas
 

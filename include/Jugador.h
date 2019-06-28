@@ -11,6 +11,7 @@ class Jugador
         /// Constructores
         Jugador();
         Jugador(string _name, int _edad, int _saldo);
+        Jugador(const Jugador &_jugador);
 
         /// Destructores
         ~Jugador();

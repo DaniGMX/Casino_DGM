@@ -18,60 +18,14 @@ Casino::~Casino()
 
 
 /// Metodos
+
 void Casino::AddJugador()
-{
-    Jugador nuevoJugador = Jugador();
-
-    if (numeroJugadores > 0)
-    {
-        Jugador* jugadoresAnteriores;
-        jugadoresAnteriores = jugadores;
-
-        numeroJugadores++;
-
-        redimensionarJugadores();
-
-        for (int i = 0; i < numeroJugadores; i++)
-        {
-            if (i < (numeroJugadores - 1))
-            {
-                cout << i << endl;
-                jugadores[i] = jugadoresAnteriores[i];
-                cout << jugadores[i].getAlias() << endl;
-            }
-            else
-            {
-                cout << i << endl;
-                jugadores[numeroJugadores - 1] = nuevoJugador;
-                cout << jugadores[i].getAlias() << endl;
-            }
-        }
-    }
-
-    else
-    {
-        numeroJugadores++;
-        redimensionarJugadores();
-        jugadores[0] = nuevoJugador;
-    }
-
-    system("cls");
-}
-
-void Casino::AddPlayers()
 {
     Jugador* nuevoJugador = new Jugador();
 
     numeroJugadores++;
 
-    players.push_back(*nuevoJugador);
-}
-
-void Casino::redimensionarJugadores()
-{
-    jugadores = (Jugador*)malloc(sizeof(Jugador) * numeroJugadores);
-
-    jugadores = (Jugador*)realloc(jugadores, sizeof(Jugador) * numeroJugadores);
+    jugadores.push_back(*nuevoJugador);
 }
 
 int Casino::Menu()
@@ -107,10 +61,10 @@ int Casino::Menu()
         switch (eleccion)
         {
             case 0:
-                salaActual = 1;
+                JugarRuleta();
                 break;
             case 1:
-                AddPlayers();
+                AddJugador();
                 break;
 
             case 2:
@@ -125,6 +79,8 @@ int Casino::Menu()
 
     else if (salaActual == 1)   // Estamos jugando a la ruleta
     {
+        mesaRuleta.PedirJugadores(jugadores);
+
         for (int i = 0; i < 2; i++)
         {
             switch(i)
@@ -163,4 +119,21 @@ int Casino::Menu()
     }
 
     return eleccion;
+}
+
+void Casino::JugarRuleta()
+{
+    bool seguirJugando;
+
+    mesaRuleta.PedirJugadores(jugadores);
+    // mesaRuleta.GenerarHistorial();
+
+    //do
+    //{
+    //    mesaRuleta.Apostar();
+    //    mesaRuelta.GenerarResultado();
+    //    mesaRuleta.RecogerApuesta();
+    //    seguirJugando = mesaRuleta.Seguir();
+    //} while (seguirJugando);
+
 }

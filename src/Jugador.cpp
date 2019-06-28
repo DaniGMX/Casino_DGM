@@ -39,6 +39,13 @@ Jugador::Jugador(string _alias, int _edad, int _saldo)
     saldo = _saldo;
 }
 
+Jugador::Jugador(const Jugador &_jugador)
+{
+    alias = _jugador.alias;
+    edad = _jugador.edad;
+    saldo = _jugador.saldo;
+}
+
 Jugador::~Jugador()
 {
     //dtor

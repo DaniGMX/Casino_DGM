@@ -8,7 +8,7 @@
 1561061804 c:\users\danie\documents\cprojects\casino_dgm\include\jugador.h
 	<string>
 
-1561555495 source:c:\users\danie\documents\git\casino_dgm\main.cpp
+1561586052 source:c:\users\danie\documents\git\casino_dgm\main.cpp
 	<iostream>
 	<cstdlib>
 	"Casino.h"
@@ -25,17 +25,17 @@
 	<math.h>
 	"Jugador.h"
 
-1561155770 source:c:\users\danie\documents\git\casino_dgm\src\jugador.cpp
+1561629994 source:c:\users\danie\documents\git\casino_dgm\src\jugador.cpp
 	<iostream>
 	"Jugador.h"
 
-1561148577 c:\users\danie\documents\git\casino_dgm\include\jugador.h
+1561629902 c:\users\danie\documents\git\casino_dgm\include\jugador.h
 	<string>
 
-1561555258 source:c:\users\danie\documents\git\casino_dgm\src\casino.cpp
+1561628366 source:c:\users\danie\documents\git\casino_dgm\src\casino.cpp
 	"Casino.h"
 
-1561555057 c:\users\danie\documents\git\casino_dgm\include\casino.h
+1561624841 c:\users\danie\documents\git\casino_dgm\include\casino.h
 	<iostream>
 	<cstdlib>
 	<vector>
@@ -45,7 +45,9 @@
 1561373847 c:\users\danie\documents\git\casino_dgm\include\ruleta.h
 	<Mesa.h>
 
-1561373726 c:\users\danie\documents\git\casino_dgm\include\mesa.h
+1561623968 c:\users\danie\documents\git\casino_dgm\include\mesa.h
+	<vector>
+	<iostream>
 	"Asiento.h"
 
 1561212077 c:\users\danie\documents\git\casino_dgm\include\blackjack.h
@@ -54,16 +56,16 @@
 1561211634 source:c:\users\danie\documents\git\casino_dgm\src\blackjack.cpp
 	"Blackjack.h"
 
-1561211591 source:c:\users\danie\documents\git\casino_dgm\src\mesa.cpp
+1561629789 source:c:\users\danie\documents\git\casino_dgm\src\mesa.cpp
 	"Mesa.h"
 
 1561211616 source:c:\users\danie\documents\git\casino_dgm\src\ruleta.cpp
 	"Ruleta.h"
 
-1561211890 source:c:\users\danie\documents\git\casino_dgm\src\asiento.cpp
+1561629772 source:c:\users\danie\documents\git\casino_dgm\src\asiento.cpp
 	"Asiento.h"
 
-1561373581 c:\users\danie\documents\git\casino_dgm\include\asiento.h
+1561630041 c:\users\danie\documents\git\casino_dgm\include\asiento.h
 	"Jugador.h"
 
 1561212013 c:\users\danie\documents\git\casino_dgm\include\ficha.h
