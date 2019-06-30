@@ -30,6 +30,8 @@ Jugador::Jugador()
         correcto = JugadorCorrecto();
 
     } while (!correcto);
+
+    apuesta = 0;
 }
 
 Jugador::Jugador(string _alias, int _edad, int _saldo)
@@ -37,6 +39,7 @@ Jugador::Jugador(string _alias, int _edad, int _saldo)
     alias = _alias;
     edad = _edad;
     saldo = _saldo;
+    apuesta = 0;
 }
 
 Jugador::Jugador(const Jugador &_jugador)
@@ -44,6 +47,7 @@ Jugador::Jugador(const Jugador &_jugador)
     alias = _jugador.alias;
     edad = _jugador.edad;
     saldo = _jugador.saldo;
+    apuesta = _jugador.apuesta;
 }
 
 Jugador::~Jugador()

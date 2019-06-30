@@ -124,16 +124,75 @@ int Casino::Menu()
 void Casino::JugarRuleta()
 {
     bool seguirJugando;
+    bool tipoCorrecto = true;
+    bool cantidadCorrecta = true;
 
-    mesaRuleta.PedirJugadores(jugadores);
-    // mesaRuleta.GenerarHistorial();
+    mesaRuleta.GenerarNumero();
+    mesaRuleta.RedimensionarCosas(numeroJugadores);
 
-    //do
-    //{
-    //    mesaRuleta.Apostar();
-    //    mesaRuelta.GenerarResultado();
+    do
+    {
+        for (int i = 0; i < numeroJugadores; i++)
+        {
+            int tipo = 0;
+            int cantidad = 0;
+            do
+            {
+                cout << jugadores[i].getAlias() << ", que tipo de apuesta quiere hacer?" << endl;
+                cout << "1.- A Color\n2.- A Paridad\n3.- A Mitades\n4.- A Decenas\n5.- A Numero" << endl;
+                cin >> tipo;
+                tipo--;
+                cout << "De acuerdo, y cuanto quieres apostar?" << endl;
+                cin >> cantidad;
+
+                if (tipo < 0 || tipo > 4)
+                    tipoCorrecto = false;
+                else if (cantidad > jugadores[i].getSaldo())
+                {
+                    cantidadCorrecta = false;
+                    jugadores[i].setApuesta(cantidad);
+                }
+
+                else if (tipoCorrecto && cantidadCorrecta)
+                    mesaRuleta.Apostar(i, tipo, cantidad);
+
+                int nuevoSaldo = jugadores[i].getSaldo() - cantidad;
+                jugadores[i].setSaldo(nuevoSaldo);
+
+            } while (!tipoCorrecto && !cantidadCorrecta);
+
+        }
+
+        cout << mesaRuleta;
+
+        for (int i = 0; i < numeroJugadores; i++)
+        {
+            bool haGanado = false;
+
+            haGanado = mesaRuleta.ComprobarApuestas(i);
+
+            if (haGanado)
+            {
+                int saldoActual = jugadores[i].getSaldo();
+                int apuestaRealizada = jugadores[i].getApuesta();
+                int nuevoSaldo = saldoActual + (2 * apuestaRealizada);
+
+                jugadores[i].setSaldo(nuevoSaldo);
+            }
+        }
+
     //    mesaRuleta.RecogerApuesta();
     //    seguirJugando = mesaRuleta.Seguir();
-    //} while (seguirJugando);
+
+        int seguir = 1;
+        cout << "Desea seguir jugando?" << endl;
+        cout << "[1 = SI, 0 = NO]\t>> ";
+        cin >> seguir;
+
+        if (seguir == 0)
+            seguirJugando = false;
+
+    } while (seguirJugando);
 
 }
+

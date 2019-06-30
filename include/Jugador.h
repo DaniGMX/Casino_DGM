@@ -20,10 +20,10 @@ class Jugador
         string getAlias(){ return this->alias; }
         int getEdad(){ return this->edad; }
         int getSaldo(){ return this->saldo; }
+        int getApuesta() { return this->apuesta; }
 
-        void setAlias(string _alias) { this->alias = _alias; }
-        void setEdad(int _edad) { this->edad = _edad; }
         void setSaldo(int _saldo) { this->saldo = _saldo; }
+        void setApuesta(int _apuesta) {this->apuesta = _apuesta; }
 
         /// Metodos
 
@@ -32,6 +32,7 @@ class Jugador
         string alias;
         int edad;
         int saldo;
+        int apuesta;
 
         /// Sobrecargas
 

@@ -20,7 +20,6 @@ class Casino
         ~Casino();
 
         /// Getters & Setters
-        // Jugador getJugador(int index) { return players[index]; }
         Jugador getJugador(int index) { return jugadores[index]; }
         int getNumeroJugadores() {return jugadores.size(); }
         int getEleccion() { return eleccion; }
@@ -37,7 +36,6 @@ class Casino
         int numeroJugadores;
         Ruleta mesaRuleta;
         vector<Jugador> jugadores;
-
 
         /// Sobrecargas
 

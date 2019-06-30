@@ -7,8 +7,8 @@ Asiento::Asiento()
 
 Asiento::Asiento(Jugador* _propietario)
 {
-    propietario = _propietario;
-    apuesta = 0;
+    //propietario = _propietario;
+    //apuesta = 0;
 }
 
 Asiento::~Asiento()
